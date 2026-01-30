@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <h2>Quest Academy</h2>
+            <br>
+            <ul>
+                <li>📊 Visão Geral</li>
+                <li>📜 Missões</li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header style="display:flex; justify-content:space-between;">
+                <div>
+                    <h1><span id="user-name">Aluno</span></h1>
+                    <p><span id="user-class">Classe</span></p>
+                </div>
+                <button onclick="logout()" style="background:red; color:white; border:none; padding:10px; border-radius:5px; cursor:pointer;">Sair</button>
+            </header>
+
+            <div style="display:flex; gap:20px; margin-top:30px;">
+                <div class="stat-card" style="flex:1;">
+                    <h3>Nível</h3>
+                    <h1 id="user-level">0</h1>
+                </div>
+                <div class="stat-card" style="flex:1;">
+                    <h3>XP</h3>
+                    <h1 id="user-xp">0</h1>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

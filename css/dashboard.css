@@ -1,0 +1,29 @@
+/* ARQUIVO: css/dashboard.css */
+body {
+    background-color: var(--bg-light); /* Sobrescreve o fundo escuro do global */
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--bg-dark);
+    color: white;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação - Quest Academy</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/criacao.css">
+</head>
+<body>
+    <div class="creation-container">
+        <h1>Olá, <span id="player-name">Viajante</span>!</h1>
+        <p>Escolha seu estilo de aprendizado:</p>
+
+        <div class="archetype-grid">
+            <div class="archetype-card" onclick="selecionarClasse('Conquistador')">
+                <div class="icon">🏆</div>
+                <h3>O Conquistador</h3>
+                <p>Focado em metas e vitórias.</p>
+            </div>
+            <div class="archetype-card" onclick="selecionarClasse('Explorador')">
+                <div class="icon">🧭</div>
+                <h3>O Explorador</h3>
+                <p>Curioso e criativo.</p>
+            </div>
+            <div class="archetype-card" onclick="selecionarClasse('Diplomata')">
+                <div class="icon">🤝</div>
+                <h3>O Diplomata</h3>
+                <p>Aprende em grupo.</p>
+            </div>
+        </div>
+
+        <p id="selection-text" style="color: #b2bec3;">Nenhum selecionado</p>
+        <button id="btn-create" class="btn-primary" disabled onclick="confirmarCriacao()">Começar Jornada</button>
+    </div>
+    <script src="js/criacao.js"></script>
+</body>
+</html>
