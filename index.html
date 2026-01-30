@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Academy - Painel do Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="profile-header">
+            <div class="avatar">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" alt="Avatar do Aluno">
+            </div>
+            <div class="info">
+                <h1 id="student-name">Estudante Iniciante</h1>
+                <p>Nível: <span id="level">1</span></p>
+                
+                <div class="progress-container">
+                    <div class="progress-bar" id="xp-bar" style="width: 0%;"></div>
+                </div>
+                <p class="xp-text"><span id="current-xp">0</span> / <span id="max-xp">100</span> XP</p>
+            </div>
+        </header>
+
+        <main>
+            <h2>📋 Missões Disponíveis</h2>
+            <div id="missions-list" class="missions-grid">
+                </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
