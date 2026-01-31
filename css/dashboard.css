@@ -191,3 +191,90 @@
     border: 2px solid #fdcb6e; /* Borda dourada */
     background: #fff;
 }
+
+/* --- ADAPTAÇÃO PARA TELEMÓVEL (MOBILE) --- */
+/* Cola isto no final do arquivo css/dashboard.css */
+
+@media (max-width: 768px) {
+    
+    /* 1. Muda a direção do layout */
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    /* 2. Menu vira uma barra no fundo fixa */
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;     /* Altura automática */
+        flex-direction: row; /* Itens lado a lado */
+        padding: 10px;
+        z-index: 1000;    /* Fica por cima de tudo */
+        border-right: none;
+        border-top: 4px solid #000;
+        justify-content: space-around; /* Espalha os ícones */
+        box-shadow: 0px -4px 0px rgba(0,0,0,0.2);
+    }
+
+    /* Esconde o Logo e Títulos no celular para poupar espaço */
+    .sidebar .logo { display: none; }
+    
+    /* Ajusta os links do menu para serem botões quadrados */
+    .menu ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+    }
+    
+    .menu li { 
+        margin-bottom: 0; 
+        flex: 1; /* Todos com o mesmo tamanho */
+        text-align: center;
+    }
+
+    .menu a {
+        padding: 10px;
+        font-size: 0.8em; /* Texto menor */
+        display: flex;
+        flex-direction: column; /* Ícone em cima, texto embaixo */
+        align-items: center;
+        border: none;
+    }
+
+    /* 3. Ajusta o conteúdo principal */
+    .main-content {
+        margin-left: 0;
+        margin-bottom: 80px; /* Dá espaço para o menu não tapar o conteúdo */
+        padding: 15px; /* Menos margem nas laterais */
+    }
+
+    /* Ajustes específicos para telas pequenas */
+    .top-bar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .user-profile-area {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pixel-avatar {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Tabela de Ranking com scroll horizontal se não couber */
+    .ranking-card {
+        overflow-x: auto;
+    }
+    
+    /* Grade do Inventário e Detalhes um em cima do outro */
+    .inventory-layout {
+        flex-direction: column;
+    }
+}
