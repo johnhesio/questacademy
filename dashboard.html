@@ -3,42 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard - Quest Academy</title>
+    
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
+
     <div class="dashboard-container">
+        
         <nav class="sidebar">
-            <h2>Quest Academy</h2>
-            <br>
-            <ul>
-                <li>📊 Visão Geral</li>
-                <li>📜 Missões</li>
-            </ul>
+            <div class="logo">Quest Academy ⚔️</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#" class="active">📊 Visão Geral</a></li>
+                    <li><a href="#">📜 Missões</a></li>
+                    <li><a href="#">🏆 Ranking</a></li>
+                    <li><a href="#">🎒 Inventário</a></li>
+                </ul>
+            </div>
         </nav>
 
         <main class="main-content">
-            <header style="display:flex; justify-content:space-between;">
-                <div>
-                    <h1><span id="user-name">Aluno</span></h1>
-                    <p><span id="user-class">Classe</span></p>
+            
+            <header class="top-bar">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <img id="user-avatar" src="" alt="Avatar do Aluno" style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--primary-color); background: #fff;">
+                    
+                    <div>
+                        <h1>Olá, <span id="user-name">Estudante</span>!</h1>
+                        <p>Sua classe: <span id="user-class" style="color: var(--primary-color); font-weight: bold;">...</span></p>
+                    </div>
                 </div>
-                <button onclick="logout()" style="background:red; color:white; border:none; padding:10px; border-radius:5px; cursor:pointer;">Sair</button>
+                
+                <button class="btn-logout" onclick="logout()">Sair</button>
             </header>
 
-            <div style="display:flex; gap:20px; margin-top:30px;">
-                <div class="stat-card" style="flex:1;">
-                    <h3>Nível</h3>
-                    <h1 id="user-level">0</h1>
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #ffeaa7;">⭐</div>
+                    <div class="stat-info">
+                        <h3>Nível</h3>
+                        <p id="user-level">1</p>
+                    </div>
                 </div>
-                <div class="stat-card" style="flex:1;">
-                    <h3>XP</h3>
-                    <h1 id="user-xp">0</h1>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #81ecec;">⚡</div>
+                    <div class="stat-info">
+                        <h3>Experiência (XP)</h3>
+                        <p id="user-xp">0</p>
+                    </div>
                 </div>
-            </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #fab1a0;">💰</div>
+                    <div class="stat-info">
+                        <h3>Moedas</h3>
+                        <p>0</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>📌 Mural de Avisos</h2>
+                <p>Bem-vindo ao sistema. Suas missões aparecerão em breve.</p>
+            </section>
+
         </main>
     </div>
+
     <script src="js/dashboard.js"></script>
 </body>
 </html>

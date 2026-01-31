@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Avatar - Quest Academy</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/avatar.css">
+</head>
+<body>
+
+    <div class="avatar-container">
+        <header>
+            <h1>Personalize seu Herói</h1>
+            <p>Como você quer ser visto no Quest Academy?</p>
+        </header>
+
+        <div class="editor-grid">
+            
+            <div class="preview-area">
+                <div class="avatar-box">
+                    <img id="avatar-preview" src="" alt="Seu Avatar">
+                </div>
+                <h3 id="player-name-display">Jogador</h3>
+            </div>
+
+            <div class="controls-area">
+                
+                <div class="control-group">
+                    <label>💇 Estilo de Cabelo</label>
+                    <select id="hair-style" onchange="atualizarAvatar()">
+                        <option value="shortHair">Cabelo Curto (Padrão)</option>
+                        <option value="longHair">Cabelo Longo Solto</option>
+                        <option value="bob">Chanel / Bob</option>
+                        <option value="curly">Cacheado / Afro</option>
+                        <option value="mohawk">Moicano</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>👓 Acessórios</label>
+                    <select id="accessories" onchange="atualizarAvatar()">
+                        <option value="none">Nenhum</option>
+                        <option value="prescription01">Óculos Redondos</option>
+                        <option value="prescription02">Óculos Quadrados</option>
+                        <option value="sunglasses">Óculos Escuros</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>👕 Cor da Roupa</label>
+                    <div class="color-options">
+                        <div class="color-btn" style="background:#6c5ce7;" onclick="mudarCor('6c5ce7')"></div>
+                        <div class="color-btn" style="background:#d63031;" onclick="mudarCor('d63031')"></div>
+                        <div class="color-btn" style="background:#0984e3;" onclick="mudarCor('0984e3')"></div>
+                        <div class="color-btn" style="background:#00b894;" onclick="mudarCor('00b894')"></div>
+                        <div class="color-btn" style="background:#2d3436;" onclick="mudarCor('2d3436')"></div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn-primary" onclick="salvarAvatar()">Confirmar Visual ✅</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/avatar.js"></script>
+</body>
+</html>

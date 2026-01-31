@@ -25,11 +25,15 @@ function selecionarClasse(nomeClasse) {
     document.getElementById('btn-create').disabled = false;
 }
 
+// EM: js/criacao.js
+
 function confirmarCriacao() {
     if (classeSelecionada) {
         localStorage.setItem('questPlayerClass', classeSelecionada);
         localStorage.setItem('questLevel', 1);
         localStorage.setItem('questXP', 0);
-        window.location.href = "dashboard.html";
+        
+        // MUDANÇA AQUI: Agora vamos para a customização do avatar
+        window.location.href = "avatar.html"; 
     }
 }
