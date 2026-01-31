@@ -11,15 +11,15 @@
 
     <div class="avatar-container">
         <header>
-            <h1>Personalize seu Herói</h1>
-            <p>Como você quer ser visto no Quest Academy?</p>
+            <h1>Avatar 8-Bit</h1>
+            <p>Monte seu personagem no estilo Pixel Art!</p>
         </header>
 
         <div class="editor-grid">
             
             <div class="preview-area">
                 <div class="avatar-box">
-                    <img id="avatar-preview" src="" alt="Seu Avatar">
+                    <img id="avatar-preview" src="" alt="Seu Avatar Pixel Art" onerror="this.src='https://api.dicebear.com/9.x/pixel-art/svg?seed=Error'">
                 </div>
                 <h3 id="player-name-display">Jogador</h3>
             </div>
@@ -27,39 +27,25 @@
             <div class="controls-area">
                 
                 <div class="control-group">
-                    <label>💇 Estilo de Cabelo</label>
-                    <select id="hair-style" onchange="atualizarAvatar()">
-                        <option value="shortHair">Cabelo Curto (Padrão)</option>
-                        <option value="longHair">Cabelo Longo Solto</option>
-                        <option value="bob">Chanel / Bob</option>
-                        <option value="curly">Cacheado / Afro</option>
-                        <option value="mohawk">Moicano</option>
-                    </select>
-                </div>
-
-                <div class="control-group">
-                    <label>👓 Acessórios</label>
-                    <select id="accessories" onchange="atualizarAvatar()">
-                        <option value="none">Nenhum</option>
-                        <option value="prescription01">Óculos Redondos</option>
-                        <option value="prescription02">Óculos Quadrados</option>
-                        <option value="sunglasses">Óculos Escuros</option>
-                    </select>
-                </div>
-
-                <div class="control-group">
-                    <label>👕 Cor da Roupa</label>
-                    <div class="color-options">
-                        <div class="color-btn" style="background:#6c5ce7;" onclick="mudarCor('6c5ce7')"></div>
-                        <div class="color-btn" style="background:#d63031;" onclick="mudarCor('d63031')"></div>
-                        <div class="color-btn" style="background:#0984e3;" onclick="mudarCor('0984e3')"></div>
-                        <div class="color-btn" style="background:#00b894;" onclick="mudarCor('00b894')"></div>
-                        <div class="color-btn" style="background:#2d3436;" onclick="mudarCor('2d3436')"></div>
+                    <label>👤 Gênero Base</label>
+                    <div class="gender-options">
+                        <button class="gender-btn active" id="btn-male" onclick="mudarGenero('male')">👨 Homem</button>
+                        <button class="gender-btn" id="btn-female" onclick="mudarGenero('female')">👩 Mulher</button>
                     </div>
                 </div>
 
+                <div class="control-group">
+                    <label>🎨 Tom de Pele</label>
+                    <div class="color-options" id="skin-colors"></div>
+                </div>
+
+                <div class="control-group">
+                    <label>💇 Cabelo Pixelado</label>
+                    <select id="hair-style" onchange="atualizarAvatar()"></select>
+                </div>
+
                 <div class="actions">
-                    <button class="btn-primary" onclick="salvarAvatar()">Confirmar Visual ✅</button>
+                    <button class="btn-primary" onclick="salvarAvatar()">Confirmar Heroi (8-Bit) 👾</button>
                 </div>
             </div>
         </div>
