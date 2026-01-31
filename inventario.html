@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranking - Quest Academy</title>
+    <title>Inventário - Quest Academy</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400;500&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/dashboard.css"> <link rel="stylesheet" href="css/ranking.css">    </head>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/inventario.css">
+</head>
 <body>
 
     <div class="dashboard-container">
@@ -21,8 +23,8 @@
                 <ul>
                     <li><a href="dashboard.html">📊 Painel Principal</a></li>
                     <li><a href="dashboard.html#missions-list">📜 Missões</a></li>
-                    <li><a href="#" class="active">🏆 Ranking</a></li>
-                    <li><a href="inventario.html">🎒 Inventário</a></li>
+                    <li><a href="ranking.html">🏆 Ranking</a></li>
+                    <li><a href="#" class="active">🎒 Inventário</a></li>
                 </ul>
             </div>
         </nav>
@@ -31,34 +33,26 @@
             
             <header class="top-bar">
                 <div>
-                    <h1>🏆 Hall da Fama</h1>
-                    <p>Os melhores estudantes da academia.</p>
+                    <h1>🎒 Sua Mochila</h1>
+                    <p>Itens e equipamentos coletados.</p>
                 </div>
                 <button onclick="window.location.href='dashboard.html'" class="btn-logout" style="background:#636e72;">Voltar</button>
             </header>
 
-            <section class="ranking-area">
-                
-                <div class="ranking-card">
-                    <table id="ranking-table">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Aluno</th>
-                                <th>Nível</th>
-                                <th>XP Total</th>
-                            </tr>
-                        </thead>
-                        <tbody id="ranking-body">
-                            </tbody>
-                    </table>
-                </div>
+            <div class="inventory-layout">
+                <div class="inventory-grid" id="inventory-grid">
+                    </div>
 
-            </section>
+                <div class="item-details" id="item-details">
+                    <h2 id="item-name">Selecione um item</h2>
+                    <div class="item-icon-large" id="item-icon">❓</div>
+                    <p id="item-desc">Clique em um item na mochila para ver os detalhes e atributos.</p>
+                </div>
+            </div>
 
         </main>
     </div>
 
-    <script src="js/ranking.js"></script>
+    <script src="js/inventario.js"></script>
 </body>
 </html>

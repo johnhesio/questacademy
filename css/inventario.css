@@ -1,0 +1,101 @@
+/* ARQUIVO: css/inventario.css */
+
+.inventory-layout {
+    display: flex;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- GRADE DE ITENS --- */
+.inventory-grid {
+    flex: 2;
+    background: #2d3436; /* Fundo escuro da mochila */
+    padding: 20px;
+    border: var(--border-black);
+    box-shadow: var(--shadow-hard);
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px;
+    min-height: 400px; /* Garante tamanho mínimo */
+}
+
+.inv-slot {
+    width: 80px;
+    height: 80px;
+    background-color: #636e72; /* Cor de slot vazio */
+    border: 4px solid #000;
+    box-shadow: inset 4px 4px 0px rgba(0,0,0,0.5); /* Sombra interna para parecer fundo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.1s;
+    position: relative;
+}
+
+.inv-slot:hover {
+    background-color: #b2bec3;
+}
+
+/* Item dentro do slot */
+.inv-item {
+    font-size: 2.5em; /* Emoji grande */
+    filter: drop-shadow(2px 2px 0 #000);
+}
+
+/* Slot Selecionado */
+.inv-slot.selected {
+    border-color: #ffeaa7; /* Borda dourada */
+    background-color: #fff;
+}
+
+/* Contador de quantidade (ex: x5 Poções) */
+.item-qty {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    font-size: 0.7em;
+    color: white;
+    font-family: 'Press Start 2P';
+    text-shadow: 1px 1px 0 #000;
+}
+
+/* --- DETALHES DO ITEM --- */
+.item-details {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border: var(--border-black);
+    box-shadow: var(--shadow-hard);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-details h2 {
+    font-size: 1em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    min-height: 1.5em;
+}
+
+.item-icon-large {
+    width: 120px;
+    height: 120px;
+    background: #dfe6e9;
+    border: var(--border-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.item-details p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #2d3436;
+}
