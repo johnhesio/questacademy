@@ -1,0 +1,59 @@
+/* ARQUIVO: css/ranking.css */
+
+.ranking-area {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ranking-card {
+    background: white;
+    padding: 20px;
+    border: var(--border-black);
+    box-shadow: var(--shadow-hard);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+}
+
+thead {
+    background-color: #2d3436;
+    color: #ffeaa7;
+    font-family: 'Press Start 2P';
+    font-size: 0.8em;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #dfe6e9;
+}
+
+/* Destaque para o Jogador */
+tr.highlight {
+    background-color: #d1ccc0; /* Fundo diferente */
+    font-weight: bold;
+    border: 2px solid #000;
+}
+
+tr.highlight td {
+    color: var(--primary-color);
+}
+
+/* Avatar pequeno na tabela */
+.mini-avatar {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+/* Cores dos Primeiros Lugares */
+tr:nth-child(1) td:first-child { color: #f1c40f; text-shadow: 1px 1px 0 #000; font-size: 1.5em; } /* Ouro */
+tr:nth-child(2) td:first-child { color: #95a5a6; text-shadow: 1px 1px 0 #000; font-size: 1.3em; } /* Prata */
+tr:nth-child(3) td:first-child { color: #e67e22; text-shadow: 1px 1px 0 #000; font-size: 1.2em; } /* Bronze */
