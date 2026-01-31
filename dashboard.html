@@ -1,78 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - Quest Academy</title>
-    
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-</head>
-<body>
 
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
     <div class="dashboard-container">
-        
-        <nav class="sidebar">
-            <div class="logo">Quest Academy ⚔️</div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#" class="active">📊 Visão Geral</a></li>
-                    <li><a href="#">📜 Missões</a></li>
-                    <li><a href="#">🏆 Ranking</a></li>
-                    <li><a href="#">🎒 Inventário</a></li>
-                </ul>
+      <nav class="sidebar">
+        <div class="logo">Quest Academy ⚔️</div>
+        <div class="menu">
+          <ul>
+            <li><a href="#" class="active">📊 Painel Principal</a></li>
+            <li><a href="#">📜 Missões</a></li>
+            <li><a href="#">🏆 Ranking (Em breve)</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="main-content">
+        <header class="top-bar">
+          <div class="user-profile-area">
+            <img id="user-avatar" src="" alt="Avatar" class="pixel-avatar" />
+
+            <div class="user-info">
+              <h1>Olá, <span id="user-name">Estudante</span>!</h1>
+              <p class="user-class">Classe: <span id="user-class">...</span></p>
+
+              <div class="xp-container">
+                <div class="xp-info">
+                  <span>Nível <strong id="user-level">1</strong></span>
+                  <span
+                    ><span id="current-xp">0</span> /
+                    <span id="next-level-xp">100</span> XP</span
+                  >
+                </div>
+                <div class="progress-bar-bg">
+                  <div
+                    class="progress-bar-fill"
+                    id="xp-bar"
+                    style="width: 0%"
+                  ></div>
+                </div>
+              </div>
             </div>
-        </nav>
+          </div>
 
-        <main class="main-content">
-            
-            <header class="top-bar">
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <img id="user-avatar" src="" alt="Avatar do Aluno" style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--primary-color); background: #fff;">
-                    
-                    <div>
-                        <h1>Olá, <span id="user-name">Estudante</span>!</h1>
-                        <p>Sua classe: <span id="user-class" style="color: var(--primary-color); font-weight: bold;">...</span></p>
-                    </div>
-                </div>
-                
-                <button class="btn-logout" onclick="logout()">Sair</button>
-            </header>
+          <button class="btn-logout" onclick="logout()">Sair 🚪</button>
+        </header>
 
-            <section class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon" style="background: #ffeaa7;">⭐</div>
-                    <div class="stat-info">
-                        <h3>Nível</h3>
-                        <p id="user-level">1</p>
-                    </div>
-                </div>
+        <section class="content-area">
+          <h2>📜 Quadro de Missões</h2>
+          <p>
+            Complete as tarefas abaixo para ganhar XP e evoluir seu personagem.
+          </p>
 
-                <div class="stat-card">
-                    <div class="stat-icon" style="background: #81ecec;">⚡</div>
-                    <div class="stat-info">
-                        <h3>Experiência (XP)</h3>
-                        <p id="user-xp">0</p>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon" style="background: #fab1a0;">💰</div>
-                    <div class="stat-info">
-                        <h3>Moedas</h3>
-                        <p>0</p>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2>📌 Mural de Avisos</h2>
-                <p>Bem-vindo ao sistema. Suas missões aparecerão em breve.</p>
-            </section>
-
-        </main>
+          <div id="missions-list" class="missions-grid"></div>
+        </section>
+      </main>
     </div>
 
     <script src="js/dashboard.js"></script>
-</body>
+  </body>
 </html>
